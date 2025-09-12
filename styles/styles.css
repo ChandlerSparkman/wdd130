@@ -1,5 +1,5 @@
 main {
-    width: 850px;
+    max-width: 850px;
 }
 
 main img{
@@ -11,6 +11,21 @@ p {
     padding: 0;
 }
 
+nav {
+    background-color: #08007c;
+    padding: 2em;
+}
+
+h1 {
+    color: white;
+    background-color: #08007c;
+}
+
+nav a{
+    color: white;
+    padding: 1em;
+    display: block;
+}
 aside {
     width: 800px;
     margin: 15px;
