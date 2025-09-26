@@ -1,3 +1,6 @@
+/* ============================
+   VARIABLES & GLOBAL SETTINGS
+   ============================ */
 :root {
     --primary-color: #064e9c;
     --secondary-color: #f4a261;
@@ -18,34 +21,12 @@ body {
     color: var(--accent1-color);
 }
 
-header, main, footer {
-    width: 840px;
-    margin: 0 auto;
-}
-
+/* ============================
+   TYPOGRAPHY
+   ============================ */
 h1, h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
-
-}
-
-nav, p, section, article {
-    margin: 16px;
-    padding: 8px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
 }
 
 h1 {
@@ -59,7 +40,78 @@ h1 {
     color: #fff;
 }
 
-article {
+/* ============================
+   LAYOUT STRUCTURE
+   ============================ */
+header, main, footer {
+    width: 840px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+    border: 1px solid var(--primary-color);
+}
+
+img {
+    grid-column-start: 2;
+}
+
+nav {
+    grid-column-start: 3;
+}
+
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ============================
+   HEADER & NAVIGATION
+   ============================ */
+header {
+    background-color: var(--accent1-color);
+    margin-bottom: 1rem;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 1rem;
+    
+}
+
+header ul li {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: 1px solid var(--primary-color);
+}
+
+header a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ============================
+   HERO SECTION
+   ============================ */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero article {
     position: absolute;
     bottom: 5px;
     width: 96.5%;
@@ -75,6 +127,13 @@ article {
     padding-top: 1em;
 }
 
-.socialmedia a img{
+/* ============================
+   SOCIAL MEDIA ICONS
+   ============================ */
+.socialmedia a {
+    text-decoration: none;
+}
+
+.socialmedia a img {
     max-width: 20px;
 }
