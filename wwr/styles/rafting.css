@@ -1,11 +1,10 @@
-/* ============================
-   VARIABLES & GLOBAL SETTINGS
-   ============================ */
+/* INTIALIZE */
 :root {
-    --primary-color: #064e9c;
-    --secondary-color: #f4a261;
-    --accent1-color: #055a05;
-    --accent2-color: #e9c46a;
+    
+    --articlebackgroundcolor: #1977c5;
+    --fullbackgroundcolor: #064e9c;
+    --headercolor: #f4a261;
+    --textcolor: #fff;
     --heading-font: "Times New Roman", "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -19,14 +18,15 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--fullbackgroundcolor);
 }
 
-/* ============================
-   TYPOGRAPHY
-   ============================ */
+/* TYPOGRAPHY */
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--headercolor);
+    text-align: center;
+    padding-bottom: 3px;
 }
 
 h1 {
@@ -34,15 +34,10 @@ h1 {
     top: 20px;
     width: 100%;
     padding: 16px;
-    text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
+    background-color: var(--articlebackgroundcolor);
 }
 
-/* ============================
-   LAYOUT STRUCTURE
-   ============================ */
+/* LAYOUT */
 header, main, footer {
     width: 840px;
     margin: 0 auto;
@@ -51,28 +46,26 @@ header, main, footer {
 .grid {
     display: grid;
     align-items: center;
-    border: 1px solid var(--primary-color);
 }
 
-img {
-    grid-column-start: 2;
-}
-
-nav {
-    grid-column-start: 3;
-}
-
-nav, p, section, article {
+nav, p{
     margin: 16px;
     padding: 8px;
 }
 
-/* ============================
-   HEADER & NAVIGATION
-   ============================ */
+/* HEADER AND NAVIGATION */
 header {
-    background-color: var(--accent1-color);
+    background-color: var(--articlebackgroundcolor);
     margin-bottom: 1rem;
+    border: 1px solid black;
+}
+
+header img {
+    grid-column-start: 2;
+}
+
+header nav {
+    grid-column-start: 3;
 }
 
 header ul {
@@ -87,7 +80,7 @@ header ul li {
     background-color: white;
     padding: 0.5rem 1rem;
     margin: 0 0.5rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid black;
 }
 
 header a {
@@ -98,15 +91,18 @@ header a {
     text-align: center;
 }
 
-/* ============================
-   HERO SECTION
-   ============================ */
+/* HERO */
 .hero {
     position: relative;
+    border: 1px solid black;
+}
+
+.hero h1 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -116,8 +112,9 @@ header a {
     bottom: 5px;
     width: 96.5%;
     padding: 3px;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
+    margin: 16px;
+    background-color: var(--articlebackgroundcolor);
+    border: 1px solid black;
     color: #fff;
 }
 
@@ -127,13 +124,65 @@ header a {
     padding-top: 1em;
 }
 
-/* ============================
-   SOCIAL MEDIA ICONS
-   ============================ */
+/* SECTION */
+section {
+    width: 100%;
+    margin-top: 16px;
+    padding: 4px;
+    border: 1px solid black;
+    background-color: var(--articlebackgroundcolor);
+    color: #fff;
+    font-size: small;
+    
+
+}
+
+section article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+section article img {
+    height: 150px;
+    width: auto;
+}
+
+section figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section figure img {
+    width: 150px;
+    height: auto;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    background-color: var(--articlebackgroundcolor);
+    border: 1px solid black;
+    margin-top: 16px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+footer p {
+    align-self: center;
+}
+
+footer a {
+    float: right;
+}
+
 .socialmedia a {
     text-decoration: none;
 }
 
 .socialmedia a img {
     max-width: 20px;
+    margin: 3px;
 }
