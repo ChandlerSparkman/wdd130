@@ -133,32 +133,40 @@ section {
     background-color: var(--articlebackgroundcolor);
     color: #fff;
     font-size: small;
-    
-
 }
 
-section article {
+.content-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-section article img {
+.content-row p {
+    width: 30%;
+    min-width: 200px;
+}
+
+.content-row img {
     height: 150px;
     width: auto;
 }
 
-section figure {
+.content-row figure img {
+    height: 100px;
+    width: auto;
+}
+
+figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 150px;
+    text-align: center;
 }
 
-section figure img {
-    width: 150px;
-    height: auto;
-}
 
 /* FOOTER */
 footer {
