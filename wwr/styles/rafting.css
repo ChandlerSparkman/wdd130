@@ -30,7 +30,6 @@ h1, h2 {
 }
 
 h1 {
-    position: absolute;
     top: 20px;
     width: 100%;
     padding: 16px;
@@ -51,6 +50,11 @@ header, main, footer {
 nav, p{
     margin: 16px;
     padding: 8px;
+}
+
+section article {
+    text-align: center;
+    font-size: large;
 }
 
 /* HEADER AND NAVIGATION */
@@ -74,6 +78,11 @@ header ul {
     list-style-type: none;
     padding: 1rem;
     
+}
+
+section div iframe {
+    max-width: 450px;
+    padding: 15px;
 }
 
 header ul li {
@@ -100,6 +109,7 @@ header a {
 .hero h1 {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    position: absolute;
 }
 
 .hero img {
@@ -135,6 +145,11 @@ section {
     font-size: small;
 }
 
+section div {
+    display: flex;
+    justify-content: center;
+}
+
 .content-row {
     display: flex;
     flex-direction: row;
@@ -167,6 +182,85 @@ figure {
     text-align: center;
 }
 
+/* FORM */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    flex: 1;
+    padding-right: 10px;
+    text-align: left;
+    align-content: center;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    flex: 2;
+    padding: 8px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.vertical-radio {
+    display: flex;
+    align-items: flex-start;
+}
+
+.vertical-radio > label {
+    flex: 1;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.radio-options {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-options > div {
+    margin-bottom: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
 
 /* FOOTER */
 footer {
