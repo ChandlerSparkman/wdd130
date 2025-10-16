@@ -103,7 +103,8 @@ header a {
 /* HERO */
 .hero {
     position: relative;
-    border: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .hero h1 {
@@ -115,11 +116,12 @@ header a {
 .hero img {
     width: 100%;
     height: auto;
+    border: 1px solid black;
 }
 
 .hero article {
     position: absolute;
-    bottom: 5px;
+    bottom: 10px;
     width: 96.5%;
     padding: 3px;
     margin: 16px;
@@ -131,7 +133,7 @@ header a {
 .hero article img {
     float: right;
     width: 125px;
-    padding-top: 1em;
+    
 }
 
 /* SECTION */
@@ -148,8 +150,41 @@ section {
 section div {
     display: flex;
     justify-content: center;
+    font-size: large;
 }
 
+section a {
+    color: var(--textcolor);
+    text-decoration: none;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 15px;
+}
+
+.grid-content img {
+    max-width: 200px;
+    height: auto;
+}
+
+.offering1 { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+.offering2 { 
+    grid-area: 1 / 4 / 2 / 5; 
+}
+
+.offering1, .offering2 {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    text-align: center;
+}
 .content-row {
     display: flex;
     flex-direction: row;
