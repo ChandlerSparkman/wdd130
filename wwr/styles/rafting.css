@@ -113,6 +113,11 @@ header a {
     position: absolute;
 }
 
+.hero article h3 {
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
 .hero img {
     width: 100%;
     height: auto;
